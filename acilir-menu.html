@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Açılır Menü</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      div.box {
+        text-align: center;
+        width: 140px;
+      }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0 10px 10px 10px;
+      }
+      nav ul li a {
+        display: inline-block;
+        padding: 0.3rem;
+        text-decoration: none;
+        color: white;
+      }
+      /* div.box nav {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 1s;
+      }
+      div.box input:checked + nav {
+        opacity: 1;
+        background-color: lightgray;
+        pointer-events: all;
+      } */
+      div.box input {
+        display: none;
+      }
+      div.box label {
+        display: inline-block;
+        background-color: lightgray;
+        width: 7.5rem;
+        cursor: pointer;
+      }
+      nav ul li:nth-child(1) {
+        opacity: 0;
+        pointer-events: none;
+        transition: all 1s;
+      }
+      nav ul li:nth-child(2) {
+        opacity: 0;
+        pointer-events: none;
+        transition: all 2s;
+      }
+      nav ul li:nth-child(3) {
+        opacity: 0;
+        pointer-events: none;
+        transition: all 3s;
+      }
+      nav ul li:nth-child(4) {
+        opacity: 0;
+        pointer-events: none;
+        transition: all 4s;
+      }
+      div.box input:checked + nav ul li:nth-child(1) {
+        opacity: 1;
+        background-color: lightgray;
+        pointer-events: all;
+      }
+      div.box input:checked + nav ul li:nth-child(2) {
+        opacity: 1;
+        background-color: lightgray;
+        pointer-events: all;
+      }
+      div.box input:checked + nav ul li:nth-child(3) {
+        opacity: 1;
+        background-color: lightgray;
+        pointer-events: all;
+      }
+      div.box input:checked + nav ul li:nth-child(4) {
+        opacity: 1;
+        background-color: lightgray;
+        pointer-events: all;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <label for="switch"><i class="fa-solid fa-bars"></i></label>
+      <input type="checkbox" id="switch" />
+      <nav>
+        <ul>
+          <li><a href="#home">Ana Sayfa</a></li>
+          <li><a href="#products">Ürünler</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">İletişim</a></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
